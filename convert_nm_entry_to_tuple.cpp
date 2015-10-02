@@ -59,7 +59,7 @@ auto convert_nm_tuple_to_string (const std::string &nm_out)
     nm_out_unparsed = nm_out_unparsed.substr (digits_len + 1);
   }
 
-  auto mode = [&] () -> unique_ptr<unsigned char>
+  auto mode = [&] () -> unique_ptr<char>
   {
     return make_unique<char> (nm_out_unparsed[0]);
   } ();

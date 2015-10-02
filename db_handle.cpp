@@ -1,3 +1,4 @@
+#if 0
 #include <string>
 #include <memory>
 #include <utility>
@@ -44,3 +45,4 @@ void db_handle::push (tuple<
   sqlite3_stmt *pStmt = nullptr;
   sqlite3_prepare (pDb, "STATEMENT", 1024, &pStmt, nullptr);
 }
+#endif
