@@ -1,18 +1,27 @@
+#include "convert_nm_entry_to_tuple.hpp"
+
 #include <cstddef>
-#include <string>
-#include <sstream>
-#include <utility>
 #include <memory>
+#include <sstream>
+#include <string>
+#include <utility>
 
 using std::make_tuple;
 using std::make_unique;
+using std::move;
 using std::unique_ptr;
 using std::istringstream;
 using std::string;
 
 #define DEBUG_ASSERT(X)
 
-auto convert_nm_tuple_to_string (const std::string &nm_out)
+tuple<
+unique_ptr<size_t>,
+unique_ptr<size_t>,
+unique_ptr<char>,
+unique_ptr<string>
+>
+convert_nm_entry_to_tuple (const std::string &nm_out)
 {
   auto nm_out_unparsed = nm_out;
 
