@@ -17,7 +17,7 @@ class db_handle
 private:
   sqlite3 *pDb = nullptr;
   int connection = 0;
-  const string table_name {"names-db"};
+  const string table_name {"names"};
   unique_ptr<size_t> table_size = make_unique<size_t> (0);
 public:
   explicit db_handle (const string& filename);

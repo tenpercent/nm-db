@@ -1,5 +1,5 @@
 CXX = g++
-CXXFLAGS = -std=c++1z -c -Wall
+CXXFLAGS = -std=c++14 -c -Wall
 LD = g++
 LDFLAGS = -lsqlite3
 SOURCES = *.cpp
